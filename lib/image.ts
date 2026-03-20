@@ -1,0 +1,17 @@
+export { default as PurpleWhite } from '@/public/image/purple-white.png'
+export { default as Purple } from '@/public/image/purple.png'
+export { default as Profile } from '@/public/image/profile.jpg'
+export { default as BlackX } from '@/public/image/black-x.png'
+export { default as BlackWhite } from '@/public/image/black-white.png'
+export { default as Blue } from '@/public/image/blue.png'
+export { default as Red } from '@/public/image/red-splash.png'
+
+// image
+export { default as Test1 } from '@/public/image/example/1.png'
+export { default as Test2 } from '@/public/image/example/2.png'
+export { default as Test3 } from '@/public/image/example/3.png'
+export { default as Test4 } from '@/public/image/example/4.png'
+export { default as Test5 } from '@/public/image/example/5.png'
+export { default as Test6 } from '@/public/image/example/6.png'
+export { default as Test7 } from '@/public/image/example/7.png'
+export { default as Test8 } from '@/public/image/example/8.png'
