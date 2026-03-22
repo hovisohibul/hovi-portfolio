@@ -1,21 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import LenisLayout from "@/components/ui/layout/LenisLayout";
 import QueryLayout from "@/components/ui/layout/QueryLayout";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import ContextLayout from "@/components/ui/layout/ContextLayout";
 
 const jakartaSans = Plus_Jakarta_Sans({
-  variable: '--font-plus-jakarta-sans',
-  subsets: ['latin']
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+  variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
 });
 
@@ -31,12 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${jakartaSans.variable} bg-neutral-50`}
-      >
+      <body className={`${jakartaSans.variable} bg-neutral-50`}>
         <LenisLayout>
           <QueryLayout>
-            {children}
+            <ContextLayout>{children}</ContextLayout>
           </QueryLayout>
         </LenisLayout>
       </body>

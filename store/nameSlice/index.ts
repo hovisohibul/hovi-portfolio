@@ -1,23 +1,23 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface IName {
-    name: string | null
+  name: string | null;
 }
 
 const initialState: IName = {
-    name: null
-}
+  name: null,
+};
 
 const nameSlice = createSlice({
-    name: 'nameSlice',
-    initialState,
-    reducers: {
-        setName: (state, action: PayloadAction<IName>) => {
-            state.name = action.payload.name
-        }
-    }
-})
+  name: "nameSlice",
+  initialState,
+  reducers: {
+    setName: (state, action: PayloadAction<IName>) => {
+      state.name = action.payload.name;
+    },
+  },
+});
 
-export const { setName } = nameSlice.actions
+export const { setName } = nameSlice.actions;
 
-export default nameSlice.reducer
+export default nameSlice.reducer;

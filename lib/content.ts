@@ -1,65 +1,109 @@
-import { Test1, Test2, Test3, Test4, Test5, Test6, Test7, Test8 } from "./image"
+import { StaticImageData } from "next/image";
+import {
+  marvel,
+  pj1,
+  pj2,
+  pj3,
+  profilix,
+  Test1,
+  Test2,
+  Test3,
+  Test4,
+  Test5,
+  Test6,
+  Test7,
+  Test8,
+  tovio,
+  tvadmin1,
+  tvadmin2,
+  tvadmin3,
+} from "./image";
 
 export const BAR_ITEMS = [
-    {
-        title: 'Home',
-        link: 'home'
-    },
-    {
-        title: 'About',
-        link: 'about'
-    },
-    {
-        title: 'Portfolio',
-        link: 'portfolio'
-    },
-    {
-        title: 'Experience',
-        link: 'experience'
-    }
-]
+  {
+    title: "Home",
+    link: "home",
+  },
+  {
+    title: "About",
+    link: "about",
+  },
+  {
+    title: "Portfolio",
+    link: "portfolio",
+  },
+  {
+    title: "Experience",
+    link: "experience",
+  },
+];
 
 export const MARQUEE_TEXT = [
-    'Web Design',
-    'Frontend Developer',
-    'Web Development',
-    'NEXT JS',
-    'React',
-    'Tailwind',
-    'Redux'
-]
+  "Web Design",
+  "Frontend Developer",
+  "Web Development",
+  "Next JS",
+  "React",
+  "Tailwind",
+  "Redux",
+];
 
-export const IMAGE_SLIDER = [
-    {
-        title: 'Test1',
-        src: Test1
-    },
-    {
-        title: 'Test2',
-        src: Test2
-    },
-    {
-        title: 'Test3',
-        src: Test3
-    },
-    {
-        title: 'Test4',
-        src: Test4
-    },
-    {
-        title: 'Test5',
-        src: Test5
-    },
-    {
-        title: 'Test6',
-        src: Test6
-    },
-    {
-        title: 'Test7',
-        src: Test7
-    },
-    {
-        title: 'Test8',
-        src: Test8
-    },
-]
+interface IMAGE {
+  title: string;
+  type: string;
+  link?: string;
+  collection?: string[] | StaticImageData[];
+  src: string | StaticImageData;
+}
+
+export const IMAGE_SLIDER: IMAGE[] = [
+  {
+    title: "Marvelous",
+    type: "link",
+    link: "https://www.marveloustours.id/",
+    src: marvel,
+  },
+  {
+    title: "Profilix",
+    type: "link",
+    link: "https://profilix.id/en",
+    src: profilix,
+  },
+  {
+    title: "Tovio Landing",
+    type: "link",
+    link: "https://tovio.id/en",
+    src: tovio,
+  },
+  {
+    title: "Tovio CMS",
+    type: "collection",
+    collection: [tvadmin1, tvadmin2, tvadmin3],
+    src: tvadmin1,
+  },
+  {
+    title: "Projects",
+    type: "collection",
+    collection: [pj1, pj2, pj3],
+    src: pj1,
+  },
+  {
+    title: "Test6",
+    type: "",
+    src: Test6,
+  },
+  // {
+  //     title: 'Test7',
+  //     type: '',
+  //     src: Test7
+  // },
+  // {
+  //     title: 'Test8',
+  //     type: '',
+  //     src: Test8
+  // },
+];
+
+export const IDPOP = {
+  collectiveId: "CollectiveId",
+};

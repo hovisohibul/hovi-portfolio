@@ -1,15 +1,10 @@
-import Navbar from '@/components/ui/navbar'
-import React from 'react'
+import MainLayout from "@/components/ui/layout/MainLayout";
+import React from "react";
 
 export default function RootLayout({
-    children
+  children,
 }: Readonly<{
-    children: React.ReactNode
+  children: React.ReactNode;
 }>) {
-    return (
-        <div className='relative w-full h-full'>
-            <Navbar/>
-            {children}
-        </div>
-    )
+  return <MainLayout>{children}</MainLayout>;
 }
